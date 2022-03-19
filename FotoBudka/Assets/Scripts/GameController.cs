@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         models3D = Resources.LoadAll<GameObject>("Input");
-        Instantiate(models3D[currentIndex], transform);
+        CreatingModel();
 
         directoryPath = Application.persistentDataPath + "/Resources/Outpute/";
         if (!Directory.Exists(directoryPath))
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -37,7 +37,8 @@ public class GameController : MonoBehaviour
 
     private void LoadModelsSystem(int conditionLimit, int indexLimit, int calculationValue)
     {
-        Destroy(transform.GetChild(0).gameObject);
+        Transform modelSetPoint = transform.GetChild(0);
+        Destroy(modelSetPoint.GetChild(0).gameObject);
 
         currentIndex = currentIndex + calculationValue;
         if (currentIndex == conditionLimit)
@@ -45,7 +46,12 @@ public class GameController : MonoBehaviour
             currentIndex = indexLimit;
         }
 
-        Instantiate(models3D[currentIndex], transform);
+        CreatingModel();
+    }
+
+    private void CreatingModel()
+    {
+        Instantiate(models3D[currentIndex], transform.GetChild(0));
     }
 
     public void LoadPreviousModel()
