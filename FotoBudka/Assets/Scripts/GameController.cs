@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] private GameObject buttonsGO;
+
     private GameObject[] models3D;
     private int currentIndex = 0;
+    private string directoryPath = "";
 
     private const int FirstModelIndex = 0;
     private const int DecreaseValue = -1;
@@ -15,11 +19,20 @@ public class GameController : MonoBehaviour
     {
         models3D = Resources.LoadAll<GameObject>("Input");
         Instantiate(models3D[currentIndex], transform);
+
+        directoryPath = Application.persistentDataPath + "/Resources/Outpute/";
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
     }
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void LoadModelsSystem(int conditionLimit, int indexLimit, int calculationValue)
@@ -46,8 +59,24 @@ public class GameController : MonoBehaviour
         LoadModelsSystem(models3D.Length, FirstModelIndex, IncreaseValue);
     }
 
-    public void TakeFoto()
+    public void TakePhoto()
     {
+        buttonsGO.SetActive(false);
+        StartCoroutine("PhotoMaker");
+    }
 
+    private IEnumerator PhotoMaker()
+    {
+        yield return new WaitForEndOfFrame();
+
+        ScreenCapture.CaptureScreenshot(directoryPath + SetPhotoFileName() + ".png");
+
+        buttonsGO.SetActive(true);
+    }
+
+    private string SetPhotoFileName()
+    {
+        string fileName = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+        return fileName;
     }
 }

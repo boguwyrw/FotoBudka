@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e27ec3d1dfa72498c0e9ec5fa7e02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonsGO: {fileID: 1336861357}
 --- !u!1 &1267690963
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +947,7 @@ GameObject:
   - component: {fileID: 1891962529}
   - component: {fileID: 1891962528}
   m_Layer: 5
-  m_Name: Foto
+  m_Name: Photo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
