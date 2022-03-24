@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 37376564}
   - component: {fileID: 37376563}
   m_Layer: 5
-  m_Name: PreviousButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 1009855878}
   - component: {fileID: 1009855877}
   m_Layer: 5
-  m_Name: PreviousText
+  m_Name: BackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Previous
+  m_Text: Back
 --- !u!222 &1009855878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 1078594604}
   - component: {fileID: 1078594603}
   m_Layer: 5
-  m_Name: TakeFotoText
+  m_Name: PhotoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Take Foto
+  m_Text: Photo
 --- !u!222 &1078594604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 1267690966}
   - component: {fileID: 1267690965}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: ForwardButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 1512948808}
   - component: {fileID: 1512948807}
   m_Layer: 5
-  m_Name: TakeFotoButton
+  m_Name: PhotoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 1845826715}
   - component: {fileID: 1845826714}
   m_Layer: 5
-  m_Name: NextText
+  m_Name: ForwardText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -984,7 +984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next
+  m_Text: Forward
 --- !u!222 &1845826715
 CanvasRenderer:
   m_ObjectHideFlags: 0
