@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
         models3D = Resources.LoadAll<GameObject>("Input");
         CreatingModel();
 
-        directoryPath = Application.persistentDataPath + "/Resources/Outpute/";
+        directoryPath = Application.dataPath + "/Resources/Output/";
         if (!Directory.Exists(directoryPath))
         {
             Directory.CreateDirectory(directoryPath);
@@ -56,12 +56,14 @@ public class GameController : MonoBehaviour
 
     public void LoadPreviousModel()
     {
+        ControllersManager.Instance.ResetModelRotation();
         int lastModelIndex = models3D.Length - 1;
         LoadModelsSystem(-1, lastModelIndex, DecreaseValue);
     }
 
     public void LoadNextModel()
     {
+        ControllersManager.Instance.ResetModelRotation();
         LoadModelsSystem(models3D.Length, FirstModelIndex, IncreaseValue);
     }
 

@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 1239728379}
   - component: {fileID: 1239728380}
   - component: {fileID: 1239728381}
+  - component: {fileID: 1239728382}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -539,6 +540,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraGO: {fileID: 1960397401}
+--- !u!114 &1239728382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239728378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d7cba50663cca47b1b9b9a0431127b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelSetPoint: {fileID: 0}
 --- !u!1 &1267690963
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +836,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1239728380}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: TakeFoto
+        m_MethodName: TakePhoto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
